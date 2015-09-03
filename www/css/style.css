@@ -1,4 +1,8 @@
 /* Empty. Add your own CSS if you like */
-div {
-    height:4px;
+select {
+    width:100px;
+    display: block;
+}
+.slider {
+  height: 522px;
 }
