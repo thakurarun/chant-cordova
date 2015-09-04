@@ -1,5 +1,6 @@
-﻿angular.module('ionicApp', ['ionic'])
-.controller('EditProfileCtrl', ['$rootScope','$scope','$ionicSlideBoxDelegate', function ($rootScope, $scope, $ionicSlideBoxDelegate) {
+﻿angular.module('ionicApp')
+.controller('EditProfileCtrl', ['$rootScope', '$scope', '$ionicSlideBoxDelegate', function ($rootScope, $scope, $ionicSlideBoxDelegate) {
+    console.log("Edit profile ctrl called...");
     var Profile = {};
     $scope.slideHasChanged = function (index) {
         $rootScope.$broadcast("changeHeaderText", { index: index });
