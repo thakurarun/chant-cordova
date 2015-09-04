@@ -1,14 +1,14 @@
 ﻿angular.module('ionicApp', ['ionic'])
-.controller('EditProfileCtrl', function ($scope, $ionicSlideBoxDelegate) {
+.controller('EditProfileCtrl', ['$rootScope','$scope','$ionicSlideBoxDelegate', function ($rootScope, $scope, $ionicSlideBoxDelegate) {
     var Profile = {};
     $scope.slideHasChanged = function (index) {
-      //  $scope.items.push({ name: 'John', age: 25, gender: 'boy' });
+        $rootScope.$broadcast("changeHeaderText", { index: index });
         $ionicSlideBoxDelegate.update();
     };
     $scope.CheckInfo = function () { 
         console.log($scope.Profile.BriefHistory );
     };
     $scope.Profile = Profile;
-});
+}]);
 
 

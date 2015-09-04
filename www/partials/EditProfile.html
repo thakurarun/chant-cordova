@@ -1,0 +1,65 @@
+﻿<ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="true" >
+  <ion-slide>
+              <div class="list">
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Real Name</span>
+                        <input type="text" placeholder="John">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nick Name</span>
+                        <input type="text" placeholder="Legend">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Brief Personal History</span>
+                          <textarea ng-model="Profile.BriefHistory" placeholder="I was best drummer in ..."></textarea>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Years of experience</span>
+                              <select>
+                                  <option value="lt2"><2</option>
+                                  <option value="lt5"><5</option>
+                                  <option value="lt10"><10</option>
+                                  <option value="gt10">>10</option>
+                                </select>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Area of expertise's</span>
+                          <textarea  placeholder="Fluet, Drum..." ></textarea>
+                        </label>
+                  <label class="item item-input item-stacked-label">
+                        <span class="input-label">Type of instruments</span>
+                          <textarea  placeholder="Fluet, Drum..." ></textarea>
+                        </label>
+                </div>
+      </ion-slide>
+    <ion-slide>
+        <div class="list card">
+                <div class="item item-text-wrap">
+                Add profile pic
+                </div>
+            <div class="item item-image">
+            <img src="img/ionic.png" >
+            </div>
+            <a class="item item-icon-left assertive" href="#">
+            <i class="icon ion-android-image"></i>
+            Upload
+            </a>
+        </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="list">
+            <label class="item item-input item-stacked-label">
+            <span class="input-label">Any major events played</span>
+                <textarea  placeholder="I was best drummer in ..."></textarea>
+            </label>
+                <label class="item item-input item-stacked-label">
+            <span class="input-label">Any minor or major bands affiliated with</span>
+                <textarea  placeholder="SUSAN, Rehab, Rock ..."></textarea>
+            </label>
+                <label class="item item-input item-stacked-label">
+            <span class="input-label">	Any endorsements by any famous people</span>
+                <textarea  placeholder="John, Rocky, Stallian ..."></textarea>
+            </label>
+    </div>
+    </ion-slide>
+</ion-slide-box>
