@@ -3,7 +3,7 @@
     var HeaderMessages = ["Who are you?", "How you look?", "Any achivements?"];
     $scope.headerText = HeaderMessages[0];
         $scope.$on("changeHeaderText", function (event, args) {
-            if (!!!parseInt(args.index * 1)) {
+            if (!!!parseInt(args.index * 1) && args.index != 0) {
                 $scope.headerText = args.header;
             } else {
                 $scope.headerText = HeaderMessages[args.index];
@@ -11,25 +11,15 @@
     });
 }]).config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
+     .state('signup', {
+        url: '/',
+        templateUrl: '../partials/SignUp.html',
+        controller: 'SignUpCtrl'
+    })
     .state('editprofile', {
-        cache: false,
         url: '/editprofile',
-        views: {
-            editprofile: {
-                templateUrl: '../partials/EditProfile.html',
-                controller: 'EditProfileCtrl',
-                cache: false
-            }
-        }
-    })
-    .state('signup', {
-        url: '/signup',
-        views: {
-            signup: {
-                templateUrl: '../partials/SignUp.html',
-                controller: 'SignUpCtrl'
-            }
-        }
-    })
-    $urlRouterProvider.otherwise("/signup");
+        templateUrl: '../partials/EditProfile.html',
+        controller: 'EditProfileCtrl'
+    });
+    $urlRouterProvider.otherwise("/");
 })

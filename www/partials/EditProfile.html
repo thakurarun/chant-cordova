@@ -1,13 +1,13 @@
-﻿<ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="true" >
+﻿<ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="true">
   <ion-slide>
               <div class="list">
                         <label class="item item-input item-stacked-label">
                         <span class="input-label">Real Name</span>
-                        <input type="text" placeholder="John">
+                        <input type="text" placeholder="John" ng-model="Profile.FullName">
                         </label>
                         <label class="item item-input item-stacked-label">
                         <span class="input-label">Nick Name</span>
-                        <input type="text" placeholder="Legend">
+                        <input type="text" placeholder="Legend" ng-model="Profile.NickName">
                         </label>
                         <label class="item item-input item-stacked-label">
                         <span class="input-label">Brief Personal History</span>
@@ -15,7 +15,7 @@
                         </label>
                         <label class="item item-input item-stacked-label">
                             <span class="input-label">Years of experience</span>
-                              <select>
+                              <select ng-model="Profile.Experience">
                                   <option value="lt2"><2</option>
                                   <option value="lt5"><5</option>
                                   <option value="lt10"><10</option>
@@ -24,11 +24,11 @@
                         </label>
                         <label class="item item-input item-stacked-label">
                         <span class="input-label">Area of expertise's</span>
-                          <textarea  placeholder="Fluet, Drum..." ></textarea>
+                          <textarea  placeholder="Fluet, Drum..." ng-model="Profile.ExpertInInstruments"></textarea>
                         </label>
                   <label class="item item-input item-stacked-label">
                         <span class="input-label">Type of instruments</span>
-                          <textarea  placeholder="Fluet, Drum..." ></textarea>
+                          <textarea  placeholder="Fluet, Drum..." ng-model="Profile.SkillInstruments"></textarea>
                         </label>
                 </div>
       </ion-slide>
@@ -38,7 +38,7 @@
                 Add profile pic
                 </div>
             <div class="item item-image">
-            <img src="img/ionic.png" >
+            <img src="img/ionic.png" ng-model="Profile.ProfilePic">
             </div>
             <a class="item item-icon-left assertive" href="#">
             <i class="icon ion-android-image"></i>
@@ -50,15 +50,20 @@
             <div class="list">
             <label class="item item-input item-stacked-label">
             <span class="input-label">Any major events played</span>
-                <textarea  placeholder="I was best drummer in ..."></textarea>
+                <textarea  placeholder="I was best drummer in ..." ng-model="Profile.MajorEvents"></textarea>
             </label>
                 <label class="item item-input item-stacked-label">
             <span class="input-label">Any minor or major bands affiliated with</span>
-                <textarea  placeholder="SUSAN, Rehab, Rock ..."></textarea>
+                <textarea  placeholder="SUSAN, Rehab, Rock ..." ng-model="Profile.Affliations"></textarea>
             </label>
                 <label class="item item-input item-stacked-label">
             <span class="input-label">	Any endorsements by any famous people</span>
-                <textarea  placeholder="John, Rocky, Stallian ..."></textarea>
+                <textarea  placeholder="John, Rocky, Stallian ..." ng-model="Profile.Endorsements"></textarea>
+            </label>
+                 <label class="item item-input item-stacked-label">
+                    <button class="button button-positive" ng-click="CheckInfo()">
+                        Submit
+                    </button>
             </label>
     </div>
     </ion-slide>

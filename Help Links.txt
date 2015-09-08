@@ -5,3 +5,5 @@ http://ionicframework.com/docs/guide/building.html
 https://github.com/userapp-io/userapp-ionic/tree/master/www/templates
 
 http://learn.ionicframework.com/formulas/navigation-and-routing-part-1/
+
+https://ccoenraets.github.io/ionic-tutorial/ionic-facebook-integration.html
